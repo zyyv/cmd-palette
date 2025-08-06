@@ -1,0 +1,54 @@
+{
+  "name": "cmd-palette",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@10.14.0",
+  "description": "Interative command palette",
+  "author": "Chris <https://github.com/zyyv>",
+  "license": "MIT",
+  "homepage": "https://github.com/zyyv/cmd-palette#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zyyv/cmd-palette.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zyyv/cmd-palette/issues"
+  },
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "lint": "eslint --cache .",
+    "lint:fix": "pnpm lint --fix",
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "play": "vite",
+    "test": "vitest",
+    "typecheck": "vue-tsc --noEmit",
+    "prepublishOnly": "pnpm run build"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.16.5",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "eslint": "^9.32.0",
+    "tsdown": "^0.13.0",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "vite": "^7.0.6",
+    "vue": "^3.5.18",
+    "vue-tsc": "^3.0.4"
+  }
+}
